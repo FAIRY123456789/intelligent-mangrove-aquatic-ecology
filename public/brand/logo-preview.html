@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>红树林标识方案预览</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#fff;color:#111;font-family:"Times New Roman",SimSun,serif}
+    main{width:min(1100px,calc(100% - 40px));margin:40px auto}h1{font-size:28px;margin:0 0 8px}p{color:#444}
+    section{display:grid;grid-template-columns:180px 1fr;gap:24px;padding:24px 0;border-top:1px solid #d8d8d8}
+    h2{font-size:20px;margin:0 0 6px}.sizes{display:flex;align-items:end;flex-wrap:wrap;gap:28px}
+    figure{margin:0;text-align:center}img{display:block;margin:auto;border:1px solid #e6e6e6;background:#fff}figcaption{margin-top:8px;color:#444;font-size:13px}
+    @media(max-width:680px){section{grid-template-columns:1fr}.sizes{gap:18px}}
+  </style>
+</head>
+<body>
+<main>
+  <h1>原创红树林标识候选</h1>
+  <p>树冠、支柱根与潮汐线构成核心识别；未使用北京大学校徽、PKU 文字或官方图形。</p>
+  <section>
+    <div><h2>A · 扁平专业型</h2><p>正式站点与 favicon 选用方案。</p></div>
+    <div class="sizes" data-concept="a"></div>
+  </section>
+  <section>
+    <div><h2>B · 轻插画型</h2><p>线条更轻，适合较大尺寸辅助应用。</p></div>
+    <div class="sizes" data-concept="b"></div>
+  </section>
+  <section>
+    <div><h2>C · 轻层次型</h2><p>增加树冠层次，适合展示性场景。</p></div>
+    <div class="sizes" data-concept="c"></div>
+  </section>
+</main>
+<script>
+  for(const row of document.querySelectorAll('.sizes')){
+    for(const size of [16,32,64,128]){
+      const figure=document.createElement('figure')
+      figure.innerHTML=`<img src="./logo-concept-${row.dataset.concept}.svg" width="${size}" height="${size}" alt=""><figcaption>${size}px</figcaption>`
+      row.append(figure)
+    }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+{
+  "name": "intelligent-mangrove-aquatic-ecology",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=20.19.0 <21",
+    "npm": ">=10"
+  },
+  "scripts": {
+    "build": "npm run check:i18n && nuxt build",
+    "dev": "nuxt dev",
+    "generate": "npm run check:i18n && nuxt generate",
+    "preview": "node scripts/serve-static.mjs",
+    "lint": "eslint .",
+    "typecheck": "npm run check:i18n && nuxt typecheck",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "screenshots": "playwright test tests/e2e/screenshots.spec.ts",
+    "check:i18n": "tsx scripts/check-translations.ts",
+    "new:share": "tsx scripts/new-share.ts"
+  },
+  "dependencies": {
+    "@nuxtjs/i18n": "9.5.5",
+    "@nuxtjs/sitemap": "7.4.1",
+    "nitropack": "2.11.13",
+    "nuxt": "3.17.7",
+    "vue": "3.5.28",
+    "vue-router": "4.5.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.51.1",
+    "@types/node": "^20.17.0",
+    "eslint": "9.22.0",
+    "tsx": "4.23.1",
+    "typescript": "^5.9.3",
+    "vitest": "2.1.9",
+    "vue-tsc": "2.2.10"
+  },
+  "overrides": {
+    "nitropack": "2.11.13"
+  }
+}
