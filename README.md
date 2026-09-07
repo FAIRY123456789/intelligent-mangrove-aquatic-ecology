@@ -98,4 +98,4 @@ See `docs/DEPLOYMENT.md` for generic static hosting guidance. Host addresses, cr
 
 The codebase demonstrates a maintainable static research portal. Team facts, organizational relationships, and media permissions remain subject to the documented review process.
 
-No repository-wide open-source license has been selected. Public visibility alone does not grant permission to copy, modify, or redistribute the site or its media.
+The software code is available under the [Apache License 2.0](LICENSE). Photographs, research content, names, marks, and third-party media are excluded unless their source record explicitly states otherwise.
